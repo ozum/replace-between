@@ -1,0 +1,39 @@
+{
+  "name": "replace-between",
+  "version": "0.0.1",
+  "description": "CLI utility for replacing text between markers with text from a file or stdin.",
+  "repository": "ozum/replace-between",
+  "main": "index.js",
+  "bin": {
+    "replace-between": "bin/replace-between.js"
+  },
+  "scripts": {
+    "test": "lab --coverage --lint --globals @@any-promise/REGISTRATION"
+  },
+  "keywords": [
+    "utility",
+    "replace",
+    "cli"
+  ],
+  "author": "Özüm Eldoğan",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.x",
+    "fs-promise": "^2.x",
+    "get-stdin": "^5.x",
+    "yargonaut": "^1.x",
+    "yargs": "^7.x"
+  },
+  "devDependencies": {
+    "babel": "^6.x",
+    "babel-eslint": "^7.x",
+    "code": "^4.x",
+    "eslint-config-airbnb": "^14.x",
+    "eslint-plugin-import": "^2.x",
+    "eslint-plugin-jsx-a11y": "^4.x",
+    "eslint-plugin-react": "^6.x",
+    "fcmp": "^1.x",
+    "lab": "^13.x",
+    "mz": "^2.x"
+  }
+}
