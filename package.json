@@ -7,8 +7,14 @@
   "bin": {
     "replace-between": "bin/replace-between.js"
   },
+  "files": [
+    "lib/",
+    "bin/",
+    "index.js"
+  ],
   "scripts": {
-    "test": "lab --coverage --lint --globals @@any-promise/REGISTRATION"
+    "test": "nyc mocha --async-only; eslint . --ignore-path .gitignore",
+    "doc": "jsdoc2md *.js lib/*.js | replace-between --target README.md --token API"
   },
   "keywords": [
     "utility",
@@ -33,7 +39,8 @@
     "eslint-plugin-jsx-a11y": "^4.x",
     "eslint-plugin-react": "^6.x",
     "fcmp": "^1.x",
-    "lab": "^13.x",
-    "mz": "^2.x"
+    "mocha": "^3.x",
+    "mz": "^2.x",
+    "nyc": "^10.x"
   }
 }

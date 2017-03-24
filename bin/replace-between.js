@@ -16,7 +16,7 @@ yarganout
 const argv = yargs
   .usage('Usage: $0 [options]\n\nReplaces text between markers with text from a file or stdin.')
   .help()
-  .example('', `${cmd} --target README.md --token API DOC\nReplaces text between `
+  .example('', `${cmd} --target README.md --token 'API DOC'\nReplaces text between `
             + `${chalk.yellow('<!--- API DOC BEGIN --->')} and ${chalk.yellow('<!--- API DOC END --->')} in README.md with `
             + 'contents of input read from STDIN. ')
   .options({
@@ -58,20 +58,23 @@ const argv = yargs
   })
   .check((args) => {
     /* eslint no-param-reassign: "off" */
-    if (!(args.c || args.begin)) {
+    if (!(args.comment || args.begin)) {
       // Try to get get commennt typr from file extension.
       const fileExtension = path.parse(args.target).ext.replace('.', '');
       if (commentTypes[fileExtension]) {
         args.comment = fileExtension;
       } else {
-        return chalk[errorStyle]('Error: I cannot get comment type from file extension. Either --comment or --begin options should be provided.');
+        return chalk[errorStyle]('I cannot get comment type from file extension. Either --comment or --begin options should be provided.');
       }
     }
     return true;
   })
   .argv;
 
-
 /* eslint no-console: "off" */
 replaceBetween(argv)
-  .catch(error => console.error(chalk[errorStyle](error)));
+  .catch((error) => {
+    yargs.showHelp('log');
+    console.error(chalk[errorStyle](error));
+    process.exit(1);
+  });
