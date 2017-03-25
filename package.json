@@ -13,7 +13,7 @@
     "index.js"
   ],
   "scripts": {
-    "test": "nyc mocha --async-only; eslint . --ignore-path .gitignore",
+    "test": "nyc mocha --async-only --check-leaks && eslint . --ignore-path .gitignore",
     "doc": "jsdoc2md *.js lib/*.js | replace-between --target README.md --token API"
   },
   "keywords": [

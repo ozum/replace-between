@@ -1,6 +1,5 @@
-.idea/sonarlint/
 
-# Created by https://www.gitignore.io/api/node,webstorm,visualstudiocode,macos,windows,linux,sonar
+# Created by https://www.gitignore.io/api/node,webstorm,visualstudiocode,macos,windows,linux
 
 ### Linux ###
 *~
@@ -106,10 +105,6 @@ typings/
 .env
 
 
-### Sonar ###
-#Sonar generated dir
-/.sonar/
-
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -173,6 +168,9 @@ fabric.properties
 # .idea/misc.xml
 # *.ipr
 
+# Sonarlint plugin
+.idea/sonarlint
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -194,4 +192,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/node,webstorm,visualstudiocode,macos,windows,linux,sonar
+# End of https://www.gitignore.io/api/node,webstorm,visualstudiocode,macos,windows,linux
