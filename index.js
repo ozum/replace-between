@@ -5,7 +5,7 @@ const getStdin  = require('get-stdin');
 
 const commentTypes = {
   md:   { begin: '<!---', end: '--->' },
-  js:   { begin: '/*', end: '*/' },
+  js:   { begin: '/\\*', end: '\\*/' },
   html: { begin: '<!--', end: '-->' },
 };
 
