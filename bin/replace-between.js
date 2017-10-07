@@ -5,14 +5,15 @@ const yargs          = require('yargs');
 const chalk          = require('chalk');
 const replaceBetween = require('../index');
 
-const errorStyle   = 'red';
-const cmd          = path.parse(__filename).name;
-const commentTypes = replaceBetween.commentTypes;
+const errorStyle       = 'red';
+const cmd              = path.parse(__filename).name;
+const { commentTypes } = replaceBetween;
 
 yarganout
   .helpStyle('green')
   .errorsStyle(errorStyle);
 
+// eslint-disable-next-line prefer-destructuring
 const argv = yargs
   .usage('Usage: $0 [options]\n\nReplaces text between markers with text from a file or stdin.')
   .help()

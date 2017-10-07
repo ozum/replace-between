@@ -24,23 +24,23 @@
   "author": "Özüm Eldoğan",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^1.x",
+    "chalk": "^2.x",
     "fs-promise": "^2.x",
     "get-stdin": "^5.x",
     "yargonaut": "^1.x",
-    "yargs": "^7.x"
+    "yargs": "^9.x"
   },
   "devDependencies": {
-    "babel": "^6.x",
-    "babel-eslint": "^7.x",
-    "code": "^4.x",
-    "eslint-config-airbnb": "^14.x",
+    "babel-eslint": "^8.x",
+    "eslint": "^4.x",
+    "code": "^5.x",
+    "eslint-config-airbnb": "^16.x",
     "eslint-plugin-import": "^2.x",
-    "eslint-plugin-jsx-a11y": "^4.x",
-    "eslint-plugin-react": "^6.x",
+    "eslint-plugin-jsx-a11y": "^6.x",
+    "eslint-plugin-react": "^7.x",
     "fcmp": "^1.x",
-    "mocha": "^3.x",
+    "mocha": "^4.x",
     "mz": "^2.x",
-    "nyc": "^10.x"
+    "nyc": "^11.x"
   }
 }
