@@ -1,6 +1,6 @@
 {
   "name": "replace-between",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "CLI utility for replacing text between markers with text from a file or stdin.",
   "repository": "ozum/replace-between",
   "main": "index.js",
