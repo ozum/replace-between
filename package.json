@@ -25,7 +25,7 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.x",
-    "fs-promise": "^2.x",
+    "fs-extra": "^4.x",
     "get-stdin": "^5.x",
     "yargonaut": "^1.x",
     "yargs": "^9.x"
